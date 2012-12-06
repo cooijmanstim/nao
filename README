@@ -1,0 +1,8 @@
+These qiBuild projects are the results of my messings-around with Nao robots.
+
+  * The RandomWalk module makes the Nao walk around randomly by repeatedly calling ALMotion::moveTo(x, y, theta) with x, y and theta sampled from a normal distribution.
+  * The Observer module hooks into ALMotion's preprocess and postprocess steps to record sensor and actuator data (i.e. MDP state-action pairs).
+  * The Controller program connects to a Naoqi and invokes Observer and RandomWalk to gather data on what is going on as the robot walks around.
+
+You will need to modify the CMakeLists.txt files to make sure your compiler can find the libraries and headers.
+
