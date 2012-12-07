@@ -185,7 +185,7 @@ void Observer::record_header(ostream& stream) {
   boost::posix_time::ptime now = boost::posix_time::second_clock::local_time();
   stream << comment_prefix << "random walk starting " << now << " with " << sensor_count << " sensors, " << actuator_count << " actuators" << endl;
   stream << "timestamp" << column_separator;
-  stream << "goalx" << column_separator << "goaly" << column_separator;
+  stream << "hasgoal" << column_separator << "goalx" << column_separator << "goaly" << column_separator;
   for (int i = 0; i < sensor_count; i++)
     stream << sensor_names[i] << column_separator;
   for (int i = 0; i < actuator_count; i++)
